@@ -1,31 +1,65 @@
 const experiences = [
   {
-    role: "Senior Software Engineer",
-    company: "TechCorp Inc.",
-    period: "2022 – Present",
+    role: "Release Train Engineer",
+    company: "National Australia Bank",
+    period: "Dec 2018 – Present",
     bullets: [
-      "Led a team of 5 engineers to rebuild the core platform, reducing page load time by 40%.",
-      "Architected microservices migration serving 2M+ monthly active users.",
-      "Introduced CI/CD pipelines that cut deployment time from 2 hours to 15 minutes.",
+      "Led multiple squads under 'Buy My Home Application' domain, managing strategic initiatives like Income verification, Open Banking, and Product Simplification.",
+      "Drive Agile ceremonies including Sprint Planning, Backlog Grooming, and PI Planning.",
+      "Manage project budgets, stakeholder engagement, and cross-functional coordination.",
+      "Delivered SAVie project, reducing NAB's lending application touch time by 7 minutes and improving compliance.",
+      "Spearheaded LVR-related changes, impacting multiple banking assets.",
     ],
   },
   {
-    role: "Software Engineer",
-    company: "StartupXYZ",
-    period: "2019 – 2022",
+    role: "Project / Senior Project Manager",
+    company: "ANZ Banking Group Limited",
+    period: "Jun 2009 – May 2018",
     bullets: [
-      "Built real-time collaboration features using WebSockets and React.",
-      "Designed and implemented RESTful APIs handling 10K+ requests per minute.",
-      "Mentored 3 junior developers through code reviews and pair programming.",
+      "Delivered 'AmEx EPC' project — reissued ANZ AmEx cards with EMV chip & PIN, achieving $5M fraud loss benefit over 3 years and $1.1M increase in cardholder spend.",
+      "Delivered 'Location Intelligence Platform' resulting in ~$10M revenue uplift through network optimisation.",
+      "Managed 'Retail Lending Automation' infrastructure project — 126 servers installed and integrated with ANZ applications.",
+      "Delivered multiple compliance initiatives for MasterCard, VISA & American Express on time.",
     ],
   },
   {
-    role: "Junior Developer",
-    company: "Digital Agency Co.",
-    period: "2017 – 2019",
+    role: "Release Project Manager",
+    company: "ANZ Banking Group Limited",
+    period: "Nov 2007 – Jun 2009",
     bullets: [
-      "Developed responsive web applications for 20+ client projects.",
-      "Reduced bug count by 30% by implementing automated testing workflows.",
+      "Managed release coordination and delivery across banking platforms.",
+    ],
+  },
+  {
+    role: "Development Lead / Manager",
+    company: "ANZ Banking Group Limited",
+    period: "Mar 2004 – Nov 2007",
+    bullets: [
+      "Led development teams delivering banking technology solutions.",
+    ],
+  },
+  {
+    role: "Senior Consultant / Project Lead",
+    company: "KANBAY Inc. Ltd.",
+    period: "Sep 2001 – Mar 2004",
+    bullets: [
+      "Provided consulting and project leadership for financial services clients.",
+    ],
+  },
+  {
+    role: "System Analyst",
+    company: "Electronic Data Systems",
+    period: "Sep 2000 – Sep 2001",
+    bullets: [
+      "Performed system analysis and technical solution design.",
+    ],
+  },
+  {
+    role: "Team Member",
+    company: "American Express",
+    period: "Sep 1997 – Sep 2000",
+    bullets: [
+      "Achieved 'Extra-Ordinary Customer Relationship' award.",
     ],
   },
 ];
@@ -35,7 +69,7 @@ const ExperienceSection = () => (
     <h2 className="text-xl font-bold text-primary mb-4 tracking-tight">Experience</h2>
     <div className="space-y-6">
       {experiences.map((exp) => (
-        <div key={exp.company} className="space-y-1.5">
+        <div key={`${exp.company}-${exp.period}`} className="space-y-1.5">
           <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
             <h3 className="font-semibold text-foreground">{exp.role}</h3>
             <span className="text-sm text-muted-foreground shrink-0">{exp.period}</span>
