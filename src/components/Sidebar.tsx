@@ -1,14 +1,29 @@
 const skills = [
-  "TypeScript", "React", "Node.js", "Python", "PostgreSQL",
-  "AWS", "Docker", "Kubernetes", "GraphQL", "CI/CD",
+  "Agile & Waterfall PM",
+  "Budgeting & Cost Control",
+  "Stakeholder Management",
+  "Vendor Management",
+  "IT Infrastructure",
+  "Risk & Compliance",
+  "Process Optimization",
+  "Banking & Financial Services",
+  "Change Management",
+  "SAFe Agile",
+  "PRINCE2",
 ];
 
 const education = [
   {
-    degree: "B.S. Computer Science",
-    school: "University of California, Berkeley",
-    year: "2017",
+    degree: "Bachelor of Engineering",
+    school: "",
+    year: "",
   },
+];
+
+const certifications = [
+  "SAFe Agile Certification",
+  "PRINCE2 & Agile Methodologies",
+  "Progressive Elaboration Certification",
 ];
 
 const Sidebar = () => (
@@ -28,16 +43,41 @@ const Sidebar = () => (
       </div>
     </div>
 
+    {/* Certifications */}
+    <div>
+      <h2 className="text-xl font-bold text-primary mb-3 tracking-tight">Certifications</h2>
+      <ul className="space-y-1.5 text-sm text-text-body">
+        {certifications.map((c) => (
+          <li key={c}>• {c}</li>
+        ))}
+      </ul>
+    </div>
+
     {/* Education */}
     <div>
       <h2 className="text-xl font-bold text-primary mb-3 tracking-tight">Education</h2>
       {education.map((e) => (
-        <div key={e.school} className="space-y-0.5">
+        <div key={e.degree} className="space-y-0.5">
           <p className="font-semibold text-foreground">{e.degree}</p>
-          <p className="text-sm text-text-body">{e.school}</p>
-          <p className="text-sm text-muted-foreground">{e.year}</p>
+          {e.school && <p className="text-sm text-text-body">{e.school}</p>}
+          {e.year && <p className="text-sm text-muted-foreground">{e.year}</p>}
         </div>
       ))}
+    </div>
+
+    {/* Interests */}
+    <div>
+      <h2 className="text-xl font-bold text-primary mb-3 tracking-tight">Interests</h2>
+      <div className="flex flex-wrap gap-2">
+        {["Astrophysics", "Reading", "Strategy Games", "Cricket", "Footy", "Camping", "Travel"].map((i) => (
+          <span
+            key={i}
+            className="px-3 py-1 text-sm font-medium rounded-full bg-surface text-text-body"
+          >
+            {i}
+          </span>
+        ))}
+      </div>
     </div>
   </aside>
 );
