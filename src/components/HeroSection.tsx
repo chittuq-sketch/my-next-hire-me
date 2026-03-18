@@ -1,5 +1,4 @@
-import headshot from "@/assets/headshot.jpg";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const HeroSection = () => (
   <section className="animate-fade-up">
